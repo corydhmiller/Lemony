@@ -1,0 +1,57 @@
+// Media Queries
+
+@media screen and (max-width: 960px) {
+	.endbar-right {
+		width:84%;
+	}
+	.hero-left, .hero-right {
+		padding: 1rem;
+	}
+	.hero-left h1 {
+		font-size:3rem;
+	}
+	.massive {
+		font-size:5rem;
+	}
+	blockquote {
+		margin: 2rem 1rem;
+	}
+	
+	// Margins
+	.margin--big {
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+	}
+
+	.flex-end {
+		align-self:center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.massive {
+		font-size:4rem;
+	}
+	// Margins
+	.margin--big {
+		margin-bottom: 2rem;
+	}
+	.endbar-right {
+		width:100%;
+	}
+	.row {
+	    display: flex;
+	    align-items: center;
+	}
+	html {
+		font-size:125%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.margin--big {
+		margin-bottom: 1rem;
+	}
+	.massive {
+		font-size:2rem;
+	}
+}

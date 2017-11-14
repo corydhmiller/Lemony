@@ -1,0 +1,44 @@
+.button {
+  text-align:center;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-radius:2rem;
+  font-weight: bold;
+  @include transition($ease);
+  position: relative;
+}
+
+.button:hover, .button:focus {
+  cursor:pointer;
+  transform:scale(1.06);
+}
+.button--yellow {
+  color:$black;
+  background:$yellow;
+  box-shadow:0 0 0 0 $darkyellow;
+}
+.button--yellow:hover, .button--yellow:focus {
+  box-shadow:0 3px 0 0 $darkyellow;
+}
+.button--black {
+  color:$black;
+  border:2px solid $black;
+}
+.button--black:hover, .button--black:focus {
+  background:$yellow;
+  color:$black;
+  border-color:$yellow;
+  box-shadow:0 3px 0 0 $lessblack;
+}
+
+.button--blue {
+  color:$white;
+  background:$blue;
+  box-shadow:0 0 0 0 darken($blue, 20%);
+}
+.button--blue:hover, .button--blue:focus {
+  box-shadow:0 3px 0 0 darken($blue, 20%);
+}
+a.button:after {
+  display:none;
+}

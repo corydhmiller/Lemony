@@ -1,0 +1,11 @@
+[25-Aug-2014 08:20:05 CST6CDT] PHP Fatal error:  Call to undefined function get_header() in /home/threewor/public_html/wp-content/themes/threewords/index.php on line 8
+[17-Mar-2015 12:59:20 CST6CDT] PHP Fatal error:  Call to undefined function get_header() in /home/threewor/public_html/wp-content/themes/threewords/index.php on line 8
+[18-Apr-2015 02:18:00 CST6CDT] PHP Fatal error:  Call to undefined function get_header() in /home/threewor/public_html/wp-content/themes/threewords/index.php on line 8
+[19-May-2015 10:01:03 CST6CDT] PHP Fatal error:  Call to undefined function get_header() in /home/threewor/public_html/wp-content/themes/threewords/index.php on line 8
+[30-Jun-2015 20:11:14 CST6CDT] PHP Fatal error:  Call to undefined function get_header() in /home/threewor/public_html/wp-content/themes/threewords/index.php on line 8
+[01-Aug-2015 01:02:00 CST6CDT] PHP Fatal error:  Call to undefined function get_header() in /home/threewor/public_html/wp-content/themes/threewords/index.php on line 8
+[13-Sep-2015 02:08:56 CST6CDT] PHP Fatal error:  Call to undefined function get_header() in /home/threewor/public_html/wp-content/themes/threewords/index.php on line 8
+[13-Nov-2017 15:55:20 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/vlogolog/public_html/wp-content/themes/lemony/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/vlogolog/public_html/wp-content/themes/lemony/index.php on line 1

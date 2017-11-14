@@ -1,0 +1,23 @@
+// Homepage
+
+.homepage-hero {
+  width:100%;
+}
+.hero-yellow {
+  background: $yellow;
+  color:$black;
+  height:100%;
+}
+.hero-left {
+  text-align:right;
+  padding:5rem 3rem;
+  font-size:1.75rem;
+}
+.hero-left h1 {
+  font-weight:bold;
+  font-size:4rem;
+}
+.hero-right {
+  padding:5rem 3rem 1rem;
+
+}

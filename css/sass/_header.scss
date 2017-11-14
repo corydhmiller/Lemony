@@ -1,0 +1,15 @@
+// Header
+
+.header {
+    background: $black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.header__logo {
+  flex-grow:1;
+}
+.logo__image {
+  width:7rem;
+}

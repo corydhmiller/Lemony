@@ -1,0 +1,57 @@
+// Blocks
+
+.block {
+	padding:0 20px;
+}
+.block-copy {
+    max-width: 35em;
+}
+
+.row-dark {
+    background: $black;
+    color: $white;
+}
+.row-dark h1, .row-dark h2, .row-dark h3, .row-dark h4, .row-dark h5, .row-dark h6 {
+    color: $lesswhite;
+}
+
+// Endbar
+
+.endbar {
+    height: 2rem;
+    background: $yellow;
+}
+
+.endbar-right {
+	width:75%;
+    align-self: flex-end;
+}
+.endbar-full {
+	width:100%;
+}
+
+// Images
+
+.image__border {
+	border-width: 1rem;
+	border-style: solid;
+	border-radius: 50%;
+}
+
+.image__border--yellow {
+	border-color: $yellow;
+	background: $yellow;
+}
+
+.image--medium {
+	max-width:500px;
+}
+.image--small {
+	max-width:200px;
+}
+
+// Blockquote
+
+.blockquote--twitter {
+	font-size:1.45rem;
+}

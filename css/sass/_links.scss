@@ -1,0 +1,22 @@
+a {
+  cursor:pointer;
+  color:$orange;
+  text-decoration:none;
+  font-weight:bold;
+  position:relative;
+  @include transition($fast);
+}
+a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    z-index: -1;
+    left: 0;
+    bottom:2px;
+    background: $yellow;
+    @include transition($ease);
+}
+a:hover:after {
+    width: 100%;
+}
