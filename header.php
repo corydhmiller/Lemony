@@ -37,7 +37,7 @@
 			</div>
 			<!-- <div class="header__menu">
 				<div class="menu__button">
-					<div class="button button--yellow">Start Learning</div>
+					<div class="button button--yellow button--menu">Menu</div>
 				</div>
 			</div> -->
 		</header>

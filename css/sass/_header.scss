@@ -1,11 +1,15 @@
 // Header
 
 .header {
-    background: $black;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
+  background: $black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 888;
 }
 .header__logo {
   flex-grow:1;
