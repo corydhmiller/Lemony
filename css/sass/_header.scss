@@ -18,6 +18,12 @@
   width:7rem;
 }
 
+@media screen and (min-width: $grid-breakpoint-l) {
+  .header--visibility {
+    display:none;
+  }
+} 
+
 // Page headers
 
 .page-header {

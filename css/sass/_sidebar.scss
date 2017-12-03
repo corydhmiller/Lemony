@@ -1,0 +1,14 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: $lessblack;
+}
+
+@media screen and (max-width: $grid-breakpoint-l) {
+  .sidebar--visible {
+    display:none;
+  }
+}

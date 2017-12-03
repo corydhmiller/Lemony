@@ -29,7 +29,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<header class="header">
+		<header class="header header--visibility">
 			<div class="header__logo">
 				<div class="logo__image">
 					<a href="<?php echo get_site_url() ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/vlogology_logo.svg" /></a>

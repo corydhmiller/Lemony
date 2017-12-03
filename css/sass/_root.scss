@@ -1,5 +1,6 @@
 * {
   box-sizing:border-box;
+  @include transition($ease);  
 }
 ::-moz-selection { /* Code for Firefox */
     color: $white;
