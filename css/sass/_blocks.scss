@@ -14,11 +14,11 @@
     max-width: 35em;
 }
 
-.row-dark {
+.row--dark {
     background: $black;
     color: $white;
 }
-.row-dark h1, .row-dark h2, .row-dark h3, .row-dark h4, .row-dark h5, .row-dark h6 {
+.row--dark h1, .row--dark h2, .row--dark h3, .row--dark h4, .row--dark h5, .row--dark h6 {
     color: $lesswhite;
 }
 

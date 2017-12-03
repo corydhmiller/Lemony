@@ -1,17 +1,16 @@
-// Media Queries
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: $grid-breakpoint-l) {
 	.endbar-right {
-		width:84%;
+		width: 84%;
 	}
 	.hero-left, .hero-right {
 		padding: 1rem;
 	}
 	.hero-left h1 {
-		font-size:3rem;
+		font-size: $font-size-l;
 	}
 	.massive {
-		font-size:5rem;
+		font-size: $font-size-xl;
 	}
 	blockquote {
 		margin: 2rem 1rem;
@@ -24,13 +23,13 @@
 	}
 
 	.flex-end {
-		align-self:center;
+		align-self: center;
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $grid-breakpoint-m) {
 	.massive {
-		font-size:4rem;
+		font-size: $font-size-l;
 	}
 	// Margins
 	.margin--big {
@@ -47,11 +46,11 @@
 		font-size:125%;
 	}
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: $grid-breakpoint-s) {
 	.margin--big {
 		margin-bottom: 1rem;
 	}
 	.massive {
-		font-size:2rem;
+		font-size: $font-size-s;
 	}
 }
