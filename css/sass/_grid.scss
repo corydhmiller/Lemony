@@ -245,7 +245,7 @@
   order: 1;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $grid-breakpoint-m) {
   .container {
     width: 46rem;
   }
@@ -460,7 +460,7 @@
   }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: $grid-breakpoint-l) {
   .container {
     width: 61rem;
   }
@@ -675,7 +675,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: $grid-breakpoint-xl) {
   .container {
     width: 71rem;
   }

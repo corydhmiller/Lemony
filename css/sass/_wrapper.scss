@@ -7,11 +7,11 @@
 .content-wrapper {
 	position: relative;
 	// Was top:50 for the header, but removed the header for the launch. Header will display on mobile.
-    top: 0;
+  top: 0;
+  margin-left:0;
 }
-
-@media screen and (min-width: $grid-breakpoint-l) {
+@include screen--l {
   .content-wrapper {
-  	margin-left: 250px;
+    margin-left: 250px;
   }
 }

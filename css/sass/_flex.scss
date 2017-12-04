@@ -1,20 +1,22 @@
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  align-items:baseline;
-}
-.flex-middle {
-  justify-content: center;
-}
-.flex-center {
-  align-items:center;
-}
-.flex-middle {
-  justify-content:center;
-}
-.flex-end {
-	align-self: flex-end;
-}
-.flex-start {
-	align-self: flex-start;
+.flex {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+  }
+  &-middle {
+    justify-content: center;
+  }
+  &-center {
+    align-items:center;
+  }
+  &-middle {
+    justify-content:center;
+  }
+  &-end {
+  	align-self: flex-end;
+  }
+  &-start {
+  	align-self: flex-start;
+  }
 }

@@ -18,9 +18,12 @@
   width:7rem;
 }
 
-@media screen and (min-width: $grid-breakpoint-l) {
-  .header--visibility {
+.header--visibility {
     display:none;
+  }
+@media screen and (max-width: $grid-breakpoint-l) {
+  .header--visibility {
+    display:block;
   }
 } 
 

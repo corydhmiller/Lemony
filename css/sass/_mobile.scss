@@ -1,56 +1,39 @@
-
 @media screen and (max-width: $grid-breakpoint-l) {
-	.endbar-right {
-		width: 84%;
-	}
-	.hero-left, .hero-right {
-		padding: 1rem;
-	}
-	.hero-left h1 {
-		font-size: $font-size-l;
-	}
-	.massive {
-		font-size: $font-size-xl;
-	}
-	blockquote {
-		margin: 2rem 1rem;
-	}
-	
-	// Margins
-	.margin--big {
-		margin-top: 1rem;
-		margin-bottom: 4rem;
-	}
+    blockquote {
+        margin: 2rem 1rem;
+    }
 
-	.flex-end {
-		align-self: center;
-	}
+    // Margins
+    .margin--big {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .flex-end {
+        align-self: center;
+    }
 }
 
 @media screen and (max-width: $grid-breakpoint-m) {
-	.massive {
-		font-size: $font-size-l;
-	}
-	// Margins
-	.margin--big {
-		margin-bottom: 2rem;
-	}
-	.endbar-right {
-		width:100%;
-	}
-	.row {
-	    display: flex;
-	    align-items: center;
-	}
-	html {
-		font-size:125%;
-	}
+
+    // Margins
+    .margin--big {
+        margin-bottom: 2rem;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+    }
+
+    html {
+        font-size: 125%;
+    }
 }
+
 @media screen and (max-width: $grid-breakpoint-s) {
-	.margin--big {
-		margin-bottom: 1rem;
-	}
-	.massive {
-		font-size: $font-size-s;
-	}
+    .margin--big {
+        margin-bottom: 1rem;
+    }
+
 }

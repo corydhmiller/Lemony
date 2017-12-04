@@ -6,7 +6,7 @@
 	        <?php the_content();?>
 	    <?php endwhile; ?>
 	</div>
-	<aside class="sidebar sidebar--visible"></aside>
+	<?php include 'sidebar.php' ?> 
 </div>
 
 <?php get_footer(); ?>
