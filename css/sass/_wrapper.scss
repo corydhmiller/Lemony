@@ -2,16 +2,28 @@
 .wrapper {
     display: flex;
     flex-direction: row;
+    overflow-x: hidden;
 }
 
-.content-wrapper {
-    position: relative;
+.content {
+    &-wrapper {
+      @include transition($ease);
+        position: relative;
 
-    // Was top:50 for the header, but removed the header for the launch. Header will display on mobile.
-    top: 0;
-    margin-left: 0;
+        // Was top:50 for the header, but removed the header for the launch. Header will display on mobile.
+        top: 0;
+        left:0;
+        margin-left: 0;
 
-    @include screen--l {
-        margin-left: 250px;
+        @include screen--l {
+            margin-left: 250px;
+        }
+    }
+
+    &--sidebar {
+        left: 250px;
+        @include screen--l {
+          left:0;
+        }
     }
 }

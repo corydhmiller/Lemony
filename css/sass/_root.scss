@@ -22,10 +22,6 @@ html {
     font-size: 125%;
     margin: 0;
     padding: 0;
-
-    @include screen--l {
-        font-size: 120%;
-    }
 }
 
 body {

@@ -1,12 +1,25 @@
+$sidebarWidth: 250px;
+
 .sidebar {
-    width: 250px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: $sidebarWidth;
     height: 100vh;
     position: fixed;
-    left: 0;
     top: 0;
+    left: -$sidebarWidth;
     background: $lessblack;
+    z-index: 998;
     color: $white;
-    padding: .75rem;
+
+    @include transition($ease);
+
+    @include screen--l {
+        background: $lessblack;
+        left: 0;
+    }
+
 
     & li {
         padding-left: .5rem;
@@ -16,30 +29,19 @@
         display: none;
     }
 
-    & a {
-        font-weight: 400;
-        color: $white;
-    }
-
-    & a:hover {
-        background: $lightgrey;
-    }
-
-    & a:after {
-        display: none;
-    }
-
     &--visible {
-        display: none;
-
-        @include screen--l {
-            display: block;
-        }
+        left: 0;
     }
 
     &__logo {
-        display: flex;
         justify-content: center;
+        display: none;
+        margin-top: 1rem;
+
+        @include screen--l {
+            display: flex;
+        }
+
 
         &__image {
             width: 7rem;
@@ -47,11 +49,49 @@
     }
 
     &__nav {
-        margin-top: 2rem;
+        margin: 1rem .75rem 0;
+        border-top: 1px solid $grey;
+
+        & a {
+            font-weight: 400;
+            color: $white;
+        }
+
+        & a:hover {
+            background: $lightgrey;
+        }
+
+        & a:after {
+            display: none;
+        }
     }
 
     &__section {
         margin: 1rem 0;
+    }
+
+    &__close {
+        margin: 1rem .75rem 0;
+
+        @include screen--l {
+            display: none;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        margin-top: auto;
+        padding: 1rem 0;
+        background: $grey;
+
+        &-section {
+            flex-grow: 1;
+            text-align: center;
+
+            &:first-child {
+                border-right: 1px solid $grey;
+            }
+        }
     }
 }
 

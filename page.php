@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="wrapper">
-	<div class="content-wrapper content--sidebar">    
+	<div class="content-wrapper">    
 	    <?php while ( have_posts() ) : the_post(); ?>
 	        <?php the_content();?>
 	    <?php endwhile; ?>

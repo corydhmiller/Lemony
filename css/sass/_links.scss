@@ -4,6 +4,7 @@ a {
     text-decoration: none;
     font-weight: bold;
     position: relative;
+    z-index: 1;
 
     @include transition($fast);
 

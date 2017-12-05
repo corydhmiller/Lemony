@@ -1,4 +1,9 @@
-<aside class="sidebar sidebar--visible">
+<aside class="sidebar">
+	<div class="sidebar__close">
+		<div class="menu__button">
+			<div class="button button--yellow button--menu button--inline">Close</div>
+		</div>
+	</div>
 	<div class="sidebar__logo">
 		<div class="sidebar__logo__image">
 			<a href="<?php echo get_site_url() ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/vlogology_logo.svg" /></a>
@@ -92,5 +97,9 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+	<div class="sidebar__footer">
+		<div class="sidebar__footer-section"><a href="#">Shop</a></div>
+		<div class="sidebar__footer-section"><a href="#">Get Help</a></div>
 	</div>
 </aside>
