@@ -1,6 +1,6 @@
 <aside class="sidebar sidebar--visible">
 	<div class="sidebar__logo">
-		<div class="logo__image">
+		<div class="sidebar__logo__image">
 			<a href="<?php echo get_site_url() ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/vlogology_logo.svg" /></a>
 		</div>
 	</div>

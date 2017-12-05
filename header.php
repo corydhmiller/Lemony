@@ -31,13 +31,13 @@
 	<body>
 		<header class="header header--visibility">
 			<div class="header__logo">
-				<div class="logo__image">
+				<div class="header__logo__image">
 					<a href="<?php echo get_site_url() ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/vlogology_logo.svg" /></a>
 				</div>
 			</div>
-			<!-- <div class="header__menu">
+			<div class="header__menu">
 				<div class="menu__button">
 					<div class="button button--yellow button--menu">Menu</div>
 				</div>
-			</div> -->
+			</div>
 		</header>

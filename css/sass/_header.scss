@@ -1,31 +1,28 @@
 // Header
 
 .header {
-  background: $black;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0.55rem 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 888;
-}
-.header__logo {
-  flex-grow:1;
-}
-.logo__image {
-  width:7rem;
-}
+    background: $black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.55rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888;
 
-.header--visibility {
-    display:none;
-  }
-@media screen and (max-width: $grid-breakpoint-l) {
-  .header--visibility {
-    display:block;
-  }
-} 
+    &__logo {
+        flex-grow: 1;
+        &__image {
+          width: 7rem;
+        }
+    }
+    &--visibility {
+        @include screen--l {
+          display:none;
+        }
+    }
+}
 
 // Page headers
 

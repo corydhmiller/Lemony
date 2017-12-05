@@ -15,7 +15,9 @@
 
 ::selection { color: #fcfcfd; background: #5bcaeb; }
 
-html { font-family: "Source Sans Pro", sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; font-size: 120%; margin: 0; padding: 0; }
+html { font-family: "Source Sans Pro", sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 125%; margin: 0; padding: 0; }
+
+@media only screen and (min-width: 960px) { html { font-size: 120%; } }
 
 body { margin: 0; padding: 0; font-family: "Source Sans Pro", sans-serif; color: #252529; background: #fcfcfd; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -51,11 +53,9 @@ img { max-width: 100%; vertical-align: middle; }
 
 .header__logo { flex-grow: 1; }
 
-.logo__image { width: 7rem; }
+.header__logo__image { width: 7rem; }
 
-.header--visibility { display: none; }
-
-@media screen and (max-width: 960px) { .header--visibility { display: block; } }
+@media only screen and (min-width: 960px) { .header--visibility { display: none; } }
 
 .page-header { margin: 40px 0; font-size: 2rem; border-bottom: 22px solid #f7dd38; }
 
@@ -76,6 +76,8 @@ img { max-width: 100%; vertical-align: middle; }
 @media only screen and (min-width: 960px) { .sidebar--visible { display: block; } }
 
 .sidebar__logo { display: flex; justify-content: center; }
+
+.sidebar__logo__image { width: 7rem; }
 
 .sidebar__nav { margin-top: 2rem; }
 
@@ -113,7 +115,11 @@ p { margin: 0 0 1rem 0; }
 
 .text-center { text-align: center; }
 
-blockquote { border-left: 2rem solid #f7dd38; font-size: 1.85rem; margin: 2rem 4rem; padding: 0 1rem; font-weight: bold; font-style: italic; color: #3b3b40; }
+blockquote { border-left: 2rem solid #f7dd38; font-size: 1.85rem; margin: 2rem 1rem; padding: 0 1rem; font-weight: bold; font-style: italic; color: #3b3b40; }
+
+blockquote--twitter { font-size: 1.45rem; }
+
+@media only screen and (min-width: 960px) { blockquote { margin: 2rem 4rem; } }
 
 .subtitle { opacity: .6; font-style: italic; font-size: 1.5rem; }
 
@@ -125,7 +131,9 @@ blockquote { border-left: 2rem solid #f7dd38; font-size: 1.85rem; margin: 2rem 4
 
 .container-fluid { margin-right: auto; margin-left: auto; padding-right: 2rem; padding-left: 2rem; }
 
-.row { box-sizing: border-box; display: -ms-flexbox; display: -webkit-box; display: flex; -ms-flex: 0 1 auto; -webkit-box-flex: 0; flex: 0 1 auto; -ms-flex-direction: row; -webkit-box-orient: horizontal; -webkit-box-direction: normal; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0; }
+.row { box-sizing: border-box; display: -ms-flexbox; display: -webkit-box; display: flex; -ms-flex: 0 1 auto; -webkit-box-flex: 0; flex: 0 1 auto; -ms-flex-direction: row; -webkit-box-orient: horizontal; -webkit-box-direction: normal; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0; align-items: center; }
+
+@media only screen and (min-width: 768px) { .row { align-items: normal; } }
 
 .row.reverse { -ms-flex-direction: row-reverse; -webkit-box-orient: horizontal; -webkit-box-direction: reverse; flex-direction: row-reverse; }
 
@@ -320,7 +328,9 @@ blockquote { border-left: 2rem solid #f7dd38; font-size: 1.85rem; margin: 2rem 4
 
 .flex-middle { justify-content: center; }
 
-.flex-end { align-self: flex-end; }
+.flex-end { align-self: center; }
+
+@media only screen and (min-width: 960px) { .flex-end { align-self: flex-end; } }
 
 .flex-start { align-self: flex-start; }
 
@@ -384,8 +394,6 @@ a.button:after { display: none; }
 .image--medium { max-width: 500px; }
 
 .image--small { max-width: 200px; }
-
-.blockquote--twitter { font-size: 1.45rem; }
 
 .margin--l { margin-top: 3rem; margin-bottom: 3rem; }
 
@@ -466,13 +474,3 @@ a.button:after { display: none; }
 .ck_form_v6.ck_slide_up .ck_naked + .ck_close_link { right: 10px; top: -5px; }
 
 @media all and (min-width: 600px) { .ck_form_v6.ck_slide_up .ck_naked + .ck_close_link { right: 35px; } }
-
-@media screen and (max-width: 960px) { blockquote { margin: 2rem 1rem; }
-  .margin--big { margin-top: 1rem; margin-bottom: 4rem; }
-  .flex-end { align-self: center; } }
-
-@media screen and (max-width: 768px) { .margin--big { margin-bottom: 2rem; }
-  .row { display: flex; align-items: center; }
-  html { font-size: 125%; } }
-
-@media screen and (max-width: 480px) { .margin--big { margin-bottom: 1rem; } }

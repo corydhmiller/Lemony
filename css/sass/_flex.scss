@@ -1,22 +1,31 @@
 .flex {
-  &-container {
-    display: flex;
-    flex-direction: column;
-    align-items:baseline;
-  }
-  &-middle {
-    justify-content: center;
-  }
-  &-center {
-    align-items:center;
-  }
-  &-middle {
-    justify-content:center;
-  }
-  &-end {
-  	align-self: flex-end;
-  }
-  &-start {
-  	align-self: flex-start;
-  }
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    &-middle {
+        justify-content: center;
+    }
+
+    &-center {
+        align-items: center;
+    }
+
+    &-middle {
+        justify-content: center;
+    }
+
+    &-end {
+        align-self: center;
+
+        @include screen--l {
+            align-self: flex-end;
+        }
+    }
+
+    &-start {
+        align-self: flex-start;
+    }
 }

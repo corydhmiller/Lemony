@@ -40,6 +40,10 @@
     &__logo {
         display: flex;
         justify-content: center;
+
+        &__image {
+            width: 7rem;
+        }
     }
 
     &__nav {

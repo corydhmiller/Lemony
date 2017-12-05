@@ -1,75 +1,94 @@
+@charset "UTF-8";
+
 * {
-  box-sizing:border-box; 
+    box-sizing: border-box;
 }
-::-moz-selection { /* Code for Firefox */
+
+::-moz-selection {
+    /* Code for Firefox */
     color: $white;
     background: $blue;
 }
 
 ::selection {
-    color: $white; 
+    color: $white;
     background: $blue;
 }
 
 html {
-  font-family: $sans; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%;
-  font-size:120%;
-  margin:0;
-  padding:0;
+    font-family: $sans;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 125%;
+    margin: 0;
+    padding: 0;
+
+    @include screen--l {
+        font-size: 120%;
+    }
 }
+
 body {
-  margin:0;
-  padding:0;
-  font-family: $sans;
-  color: $black;
-  background:$white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-family: $sans;
+    color: $black;
+    background: $white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 ol {
-  list-style-type:initial;
+    list-style-type: initial;
 }
+
 ul {
-  list-style:none;
-  padding: 0;
-  margin:0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
 li {
-  line-height: 150%;
-  padding-left: 1rem;
+    line-height: 150%;
+    padding-left: 1rem;
+
+    &:before {
+        content: "•";
+        color: $yellow;
+        margin-right: 0.35rem;
+    }
 }
-li:before {
-  content: "•";
-  color:$yellow;
-  margin-right: 0.35rem;
-}
+
 input, button {
-  font-family:$sans;
+    font-family: $sans;
 }
+
 input, textarea {
-  // This caused radio buttons not to show
-//  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  @include transition($ease);
+    -webkit-border-radius: 0;
+
+    @include transition($ease);
 }
+
 :focus {
-  outline:none;
+    outline: none;
 }
+
 [placeholder]:focus::-webkit-input-placeholder {
-  transition: opacity 0.5s ease-in-out; 
-  opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
-textarea:focus, input:focus{
+
+textarea:focus, input:focus {
     outline: 0;
 }
+
 img {
-  max-width:100%;
-  vertical-align: middle;
+    max-width: 100%;
+    vertical-align: middle;
 }
