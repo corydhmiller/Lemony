@@ -1,8 +1,8 @@
 function vlogologyScripts() {
   // Variables
-  var $sectionToggle = $('.section__toggle');
-  var $sectionHidden = $('.section__hidden');
-  var $sectionToggledClass = 'section__toggled';
+  var $sectionToggle = $('.sidebar__section--toggle');
+  var $sectionHidden = $('.sidebar__section--hidden');
+  var $sectionToggledClass = 'sidebar__section--toggled';
   var $menuButton = $('.button--menu');
   var $menuButtonOpen = 'button--menu-open';
   var $buttonYellow = 'button--yellow';
@@ -16,7 +16,7 @@ function vlogologyScripts() {
     $sectionToggle.removeClass($sectionToggledClass);
     $sectionHidden.slideUp();
     // Slider toggle is not working for whatever reason, figure that out.
-    $(this).siblings('.section__hidden').slideToggle();
+    $(this).siblings('.sidebar__section--hidden').slideToggle();
     $(this).addClass($sectionToggledClass);
   })
   $menuButton.click(function() {

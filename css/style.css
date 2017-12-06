@@ -43,7 +43,7 @@ img { max-width: 100%; vertical-align: middle; }
 
 .wrapper { display: flex; flex-direction: row; overflow-x: hidden; }
 
-.content-wrapper { transition: all 0.3s ease-in-out 0s; position: relative; top: 0; left: 0; margin-left: 0; }
+.content-wrapper { transition: all 0.3s ease-in-out 0s; position: relative; top: 0; left: 0; margin-left: 0; width: 100%; }
 
 @media only screen and (min-width: 960px) { .content-wrapper { margin-left: 250px; } }
 
@@ -97,17 +97,19 @@ img { max-width: 100%; vertical-align: middle; }
 
 .sidebar__footer-section:first-child { border-right: 1px solid #3b3b40; }
 
-.section__toggle { font-size: 1.25rem; font-weight: 600; cursor: pointer; position: relative; transition: all 0.2s; }
+.sidebar__section--toggle { font-size: 1.25rem; font-weight: 600; cursor: pointer; position: relative; transition: all 0.2s; }
 
-.section__toggle:after { content: ''; position: absolute; width: 0; height: 100%; z-index: -1; left: 0; background: #f7dd38; transition: all 0.3s ease-in-out 0s; }
+.sidebar__section--toggle:after { content: ''; position: absolute; width: 0; height: 100%; z-index: -1; left: 0; background: #f7dd38; transition: all 0.3s ease-in-out 0s; }
 
-.section__toggle:hover { color: #252529; }
+.sidebar__section--toggle:hover { color: #252529; }
 
-.section__toggle:hover:after { width: 100%; }
+.sidebar__section--toggle:hover:after { width: 100%; }
 
-.section__toggled { background: #f7dd38; color: #252529; }
+.sidebar__section--toggled { background: #f7dd38; color: #252529; }
 
-.section__hidden { display: none; overflow: hidden; position: relative; }
+.sidebar__section--hidden { display: none; overflow: hidden; position: relative; }
+
+.sidebar__current-page a { background: #53535b; }
 
 a { cursor: pointer; color: #ea9234; text-decoration: none; font-weight: bold; position: relative; z-index: 1; transition: all 0.2s; }
 

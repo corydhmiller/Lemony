@@ -93,46 +93,50 @@ $sidebarWidth: 250px;
             }
         }
     }
-}
 
-.section {
-    &__toggle {
-        font-size: 1.25rem;
-        font-weight: 600;
-        cursor: pointer;
-        position: relative;
+    &__section {
+        &--toggle {
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
 
-        @include transition($fast);
-
-        &:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 100%;
-            z-index: -1;
-            left: 0;
-            background: $yellow;
-
-            @include transition($ease);
-        }
-
-        &:hover {
-            color: $black;
+            @include transition($fast);
 
             &:after {
-                width: 100%;
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 100%;
+                z-index: -1;
+                left: 0;
+                background: $yellow;
+
+                @include transition($ease);
             }
+
+            &:hover {
+                color: $black;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+
+        &--toggled {
+            background: $yellow;
+            color: $black;
+        }
+
+        &--hidden {
+            display: none;
+            overflow: hidden;
+            position: relative;
         }
     }
 
-    &__toggled {
-        background: $yellow;
-        color: $black;
-    }
-
-    &__hidden {
-        display: none;
-        overflow: hidden;
-        position: relative;
+    &__current-page a {
+        background: $lightgrey;
     }
 }
