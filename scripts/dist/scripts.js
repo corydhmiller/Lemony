@@ -1,65 +1,36 @@
 "use strict";
 
-var vlogologyScripts = function () {
-  var sectionToggle = document.querySelectorAll(".sidebar__section--toggle");
-  var sectionHidden = document.querySelectorAll(".sidebar__section--hidden");
-  var sectionHiddenClass = "sidebar__section--hidden";
-  var sectionToggledClass = "sidebar__section--toggled";
-  var $menuButton = document.querySelectorAll(".button--menu");
-  var $sidebar = document.querySelector(".sidebar");
-  var $contentWrapper = document.querySelector(".content-wrapper");
+function vlogologyScripts() {
+  var $sectionToggle = $(".sidebar__section--toggle");
+  var $sectionHidden = $(".sidebar__section--hidden");
+  var $sectionToggledClass = "sidebar__section--toggled";
+  var $menuButton = $(".button--menu");
+  var $sidebar = $(".sidebar");
+  var $contentWrapper = $(".content-wrapper");
   var $contentWrapperSidebarVisibleClass = "content--sidebar";
   var $sidebarVisibleClass = "sidebar--visible";
 
-  // Helper Functions
-  function hasClass(element, cls) {
-    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-  }
-
-  // Action Handlers
-
-  var actionHandlers = {
-    toggleMenu: function toggleMenu() {
-      return toggleSidebarVisible();
-    },
-    sidebarSectionToggle: function sidebarSectionToggle(event) {
-      return _toggleSectionVisible(event);
-    }
+  var toggleSidebarVisible = function toggleSidebarVisible() {
+    $sidebar.toggleClass($sidebarVisibleClass);
+    $contentWrapper.toggleClass($contentWrapperSidebarVisibleClass);
   };
 
-  // Event Listeners
-
-  document.addEventListener('click', function (event) {
-    if (!event.target.dataset.action) return;
-    var action = event.target.dataset.action;
-    return actionHandlers[action] ? actionHandlers[action](event) : console.error("Not a valid action.");
+  $sectionToggle.on("click", function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $sectionToggle.removeClass($sectionToggledClass);
+    $sectionHidden.slideUp();
+    $(this).siblings(".sidebar__section--hidden").slideToggle();
+    $(this).addClass($sectionToggledClass);
+  });
+  $menuButton.on("click", function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    toggleSidebarVisible();
   });
 
-  // Controlling Events
-  var toggleSidebarVisible = function toggleSidebarVisible() {
-    $sidebar.classList.toggle($sidebarVisibleClass);
-    $contentWrapper.classList.toggle($contentWrapperSidebarVisibleClass);
-  };
-
-  var _toggleSectionVisible = function _toggleSectionVisible(event) {
-    var clickedElement = event.target;
-    var elementContent = clickedElement.nextElementSibling;
-    event.stopPropagation();
-    event.preventDefault();
-    for (var section in sectionToggle) {
-      var sectionElement = sectionToggle[section];
-      if (hasClass(sectionElement, sectionToggledClass)) {
-        sectionElement.classList.remove(sectionToggledClass);
-        elementContent.classList.add(sectionHiddenClass);
-      }
-    }
-    clickedElement.classList.add(sectionToggledClass);
-    elementContent.style.height = elementContent.offsetHeight + 'px';
-    // clickedElement.nextElementSibling.classList.remove(sectionHiddenClass)
-  };
-
-  $contentWrapper.addEventListener("click", function (e) {
-    if (hasClass($contentWrapper, $contentWrapperSidebarVisibleClass)) {
+  $contentWrapper.on("click", function (e) {
+    if ($contentWrapper.hasClass($contentWrapperSidebarVisibleClass)) {
       return toggleSidebarVisible();
     }
   });
@@ -73,6 +44,7 @@ var vlogologyScripts = function () {
       l.addEventListener(i, s);
     }
   })(document);
-
-  (function () {})();
-}();
+}
+$(document).ready(function () {
+  vlogologyScripts();
+});

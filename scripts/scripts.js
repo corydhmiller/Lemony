@@ -3,6 +3,9 @@ function vlogologyScripts() {
   const $sectionHidden = $(".sidebar__section--hidden");
   const $sectionToggledClass = "sidebar__section--toggled";
   const $menuButton = $(".button--menu");
+  const $menuButtonOpen = "button--menu-open";
+  const $buttonYellow = "button--yellow";
+  const $buttonRed = "button--red";
   const $sidebar = $(".sidebar");
   const $contentWrapper = $(".content-wrapper");
   const $contentWrapperSidebarVisibleClass = "content--sidebar";
@@ -13,7 +16,7 @@ function vlogologyScripts() {
     $contentWrapper.toggleClass($contentWrapperSidebarVisibleClass);
   };
 
-  $sectionToggle.on("click", function (e) {
+  $sectionToggle.on("click", function(e) {
     e.stopPropagation();
     e.preventDefault();
     $sectionToggle.removeClass($sectionToggledClass);
@@ -23,26 +26,24 @@ function vlogologyScripts() {
       .slideToggle();
     $(this).addClass($sectionToggledClass);
   });
-  $menuButton.on("click", function (e) {
+  $menuButton.on("click", function(e) {
     e.stopPropagation();
     e.preventDefault();
     toggleSidebarVisible();
   });
 
-  $contentWrapper.on("click", function (e) {
+  $contentWrapper.on("click", function(e) {
     if ($contentWrapper.hasClass($contentWrapperSidebarVisibleClass)) {
       return toggleSidebarVisible();
     }
   });
 
-  (function (l) {
+  (function(l) {
     let i,
-      s = {
-        touchend: function () {}
-      };
+      s = { touchend: function() {} };
     for (i in s) l.addEventListener(i, s);
   })(document);
 }
-$(document).ready(function () {
+$(document).ready(function() {
   vlogologyScripts();
 });

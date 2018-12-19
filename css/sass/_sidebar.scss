@@ -130,12 +130,10 @@ $sidebarWidth: 250px;
         }
 
         &--hidden {
-            // display: none;
-            height: 0 !important;
+            display: none;
         }
 
         &--content {
-            @include transition($ease);
             overflow: hidden;
             position: relative;
         }
