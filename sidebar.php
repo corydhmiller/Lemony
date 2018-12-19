@@ -1,7 +1,7 @@
 <aside class="sidebar">
 	<div class="sidebar__close">
 		<div class="menu__button">
-			<div class="button button--yellow button--menu button--inline">Close</div>
+			<div class="button button--yellow button--menu button--inline" data-action="toggleMenu">Close</div>
 		</div>
 	</div>
 	<div class="sidebar__logo">
@@ -53,10 +53,10 @@
 				// If this ID is a top level parent, add the section beginning here.
 				?>
 					<div class="sidebar__section">
-						<div class="sidebar__section--toggle<?php if ($item->object_id == wp_get_post_parent_id( $post->ID )) { echo ' sidebar__section--toggled';} ?>">
+						<div class="sidebar__section--toggle<?php if ($item->object_id == wp_get_post_parent_id( $post->ID )) { echo ' sidebar__section--toggled';} ?>" data-action="sidebarSectionToggle">
 							<?php echo $item->title; ?>
 						</div>
-							<div class="sidebar__section--hidden" <?php if ($item->object_id == wp_get_post_parent_id( $post->ID )){ echo 'style="display:block;"';} ?>>
+							<div class="sidebar__section--content sidebar__section--hidden" <?php if ($item->object_id == wp_get_post_parent_id( $post->ID )){ echo 'style="display:block;"';} ?>>
 								<ul>
 								<?php
 								// Now for every child, run a foreach loop that puts them all out there.

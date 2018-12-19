@@ -37,7 +37,7 @@
 	<header class="header header--visibility">
 		<div class="header__menu">
 			<div class="menu__button">
-				<div class="button button--yellow button--menu">Menu</div>
+				<div class="button button--yellow button--menu" data-action="toggleMenu">Menu</div>
 			</div>
 		</div>
 		<div class="header__logo">
