@@ -24,4 +24,13 @@ a {
     &:hover:after {
         width: 100%;
     }
+
+    &.post-edit-link {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background: $pink;
+        color: $white;
+        padding: .5rem;
+    }
 }

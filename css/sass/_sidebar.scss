@@ -22,11 +22,18 @@ $sidebarWidth: 250px;
 
 
     & li {
-        padding-left: .5rem;
+        margin: .5rem;
+        position: relative;
+        line-height:1.25rem;
     }
 
     & li:before {
-        display: none;
+        font-size: 10px;
+        content: "►";
+        line-height: 0;
+        left: 0;
+        position: absolute;
+        top: 0.75rem;
     }
 
     &--visible {
@@ -49,7 +56,7 @@ $sidebarWidth: 250px;
     }
 
     &__nav {
-        margin: 1rem .75rem 0;
+        margin: 1rem 0 0;
         border-top: 1px solid $grey;
 
         & a {
@@ -100,7 +107,7 @@ $sidebarWidth: 250px;
             font-weight: 600;
             cursor: pointer;
             position: relative;
-
+            padding: 0 .5rem;
             @include transition($fast);
 
             &:after {
@@ -131,9 +138,6 @@ $sidebarWidth: 250px;
 
         &--hidden {
             display: none;
-        }
-
-        &--content {
             overflow: hidden;
             position: relative;
         }
