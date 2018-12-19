@@ -1,0 +1,26 @@
+$spacing-unit: 0.8rem;
+
+
+$font-size:        $spacing-unit * 3;
+$font-size-s:      $spacing-unit * 2;
+$font-size-m:      $spacing-unit * 2.5;
+$font-size-l:      $spacing-unit * 4;
+$font-size-xl:     $spacing-unit * 5;
+$font-size-xxl:    $spacing-unit * 6;
+$line-height:      $spacing-unit * 4;
+$line-height-s:    $spacing-unit * 3;
+$line-height-l:    $spacing-unit * 5;
+$line-height-xl:   $spacing-unit * 6;
+$line-height-xxl:  $spacing-unit * 7;
+$letter-spacing:   $spacing-unit / 4;
+
+
+/* Grid */
+
+$grid-width:          1200px;
+$grid-col-gutter:     $spacing-unit * 3 / 2;
+$grid-columns-length: 12;
+$grid-breakpoint-s:   480px;
+$grid-breakpoint-m:   768px;
+$grid-breakpoint-l:   960px;
+$grid-breakpoint-xl:  1024px;

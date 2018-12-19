@@ -1,0 +1,73 @@
+.button {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    font-weight: bold;
+
+    @include transition($ease);
+
+    position: relative;
+
+    &:hover, &:focus {
+        cursor: pointer;
+        transform: scale(1.06);
+    }
+
+    // Yellow Button
+    &--yellow {
+        color: $black;
+        background: $yellow;
+        box-shadow: 0 0 0 0 $darkyellow;
+
+        &:hover, &:focus {
+            box-shadow: 0 3px 0 0 $darkyellow;
+        }
+    }
+
+    &--red {
+        color: $white;
+        background: $red;
+        box-shadow: 0 0 0 0 $darkred;
+
+        &:hover, &:focus {
+            box-shadow: 0 3px 0 0 $darkred;
+        }
+    }
+
+    // Black Button
+    &--black {
+        color: $black;
+        border: 2px solid $black;
+
+        &:hover, &:focus {
+            background: $yellow;
+            color: $black;
+            border-color: $yellow;
+            box-shadow: 0 3px 0 0 $lessblack;
+        }
+    }
+
+    // Blue Button
+    &--blue {
+        color: $white;
+        background: $blue;
+        box-shadow: 0 0 0 0 darken($blue, 20%);
+
+        &:hover, &:focus {
+            box-shadow: 0 3px 0 0 darken($blue, 20%);
+        }
+    }
+
+    // Menu Button
+    &--menu {
+        padding: 0.3rem 0.7rem;
+    }
+    &--inline {
+      display: inline-block;
+    }
+}
+
+a.button:after {
+    display: none;
+}

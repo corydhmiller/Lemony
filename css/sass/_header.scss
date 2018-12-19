@@ -1,0 +1,33 @@
+// Header
+
+.header {
+    background: $black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.55rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888;
+
+    &__logo {
+        margin-left:auto;
+        &__image {
+          width: 7rem;
+        }
+    }
+    &--visibility {
+        @include screen--l {
+          display:none;
+        }
+    }
+}
+
+// Page headers
+
+.page-header {
+    margin: 40px 0;
+    font-size: 2rem;
+    border-bottom: 22px solid $yellow;
+}

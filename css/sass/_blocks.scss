@@ -1,0 +1,58 @@
+// Sections
+
+// Blocks
+
+.block {
+  padding:0 20px;
+  &-copy {
+    max-width: 35em;
+  }
+}
+
+.row--dark {
+  background: $black;
+  color: $white;
+  & h1, h2, h3, h4, h5, h6 {
+   color:$lesswhite;
+  }
+}
+
+// Endbar
+
+.endbar {
+  height: 2rem;
+  background: $yellow;
+  &-right {
+    width: 100%;
+    align-self: flex-end;
+    @include screen--l {
+      width: 75%;
+    }
+    @include screen--m {
+      width: 84%;
+    }
+  }
+  &-full {
+   width:100%;
+  }
+}
+
+// Images
+
+.image {
+  &__border {
+    border-width: 1rem;
+    border-style: solid;
+    border-radius: 50%;
+    &--yellow {
+      border-color: $yellow;
+      background: $yellow;
+    }
+  }
+  &--medium {
+    max-width:500px;
+  }
+  &--small {
+    max-width:200px;
+  }
+}

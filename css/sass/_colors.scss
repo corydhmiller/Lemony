@@ -1,10 +1,28 @@
 $white: #fcfcfd;
+$lesswhite: #ededf2;
+$greywhite:#dadae3;
+$grey: #3b3b40;
+$lightgrey: lighten($grey, 10%);
+$lessblack:#2e2e33;
 $black: #252529;
-$gray: #666668;
 $yellow: #f7dd38;
+$lightyellow: #fced65;
+$darkyellow: #f0c811;
+$orange: #ea9234;
 $red: #d5443c;
+$darkred: darken($red, 10%);
 $green: #5dd961;
+$blue: #5bcaeb;
 
 .yellow {
 	color: $yellow;
+}
+
+.bg {
+	&--yellow {
+		background: $yellow;
+	}
+  &--black {
+    background: $black;
+  }
 }

@@ -1,0 +1,40 @@
+// Homepage
+
+.homepage-hero {
+    width: 100%;
+}
+
+.hero {
+    &-yellow {
+        background: $yellow;
+        color: $black;
+        height: 100%;
+    }
+
+    &-left {
+        text-align: right;
+        padding: 1rem;
+        font-size: 1.75rem;
+    }
+
+    &-left h1 {
+        font-weight: bold;
+        font-size: $font-size-l;;
+        @include screen--l {
+          font-size: 4rem;
+        }
+    }
+
+    &-right {
+        padding: 1rem;
+
+    }
+    @include screen--l {
+      &-left {
+        padding: 5rem 0;
+      }
+      &-right {
+          padding: 5rem 0 1rem;
+      }
+    }
+}

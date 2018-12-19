@@ -1,21 +1,67 @@
-h1,h2,h3,h4,h5 {
-	text-align:inherit;
+.serif {
+    font-family: $serif;
 }
+
+h1, h2, h3, h4, h5 {
+    text-align: inherit;
+}
+
 h1 {
-	color:$black;
-	font-weight:bold;
-	margin-bottom:1rem;
+    color: $black;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
+
 h2 {
-	font-size:1.5rem;
-	font-weight:bold;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
+
 h3 {
-	font-size:1.3rem;
+    font-size: 1.3rem;
 }
+
 p {
-	margin: 0 0 1rem 0;
+    margin: 0 0 1rem 0;
 }
+
 .text-center {
-	text-align:center;
+    text-align: center;
+}
+
+blockquote {
+    border-left: 2rem solid $yellow;
+    font-size: 1.85rem;
+    margin: 2rem 1rem;
+    padding: 0 1rem;
+    font-weight: bold;
+    font-style: italic;
+    color: $grey;
+
+    &--twitter {
+        font-size: 1.45rem;
+    }
+    @include screen--l {
+    	margin: 2rem 4rem;
+    }
+}
+
+.subtitle {
+    opacity: .6;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.massive {
+    font-size: $font-size-m;
+    margin: 1rem 0 0;
+
+    @include screen--m {
+        font-size: $font-size-l;
+    }
+
+
+    @include screen--xl {
+        font-size: 6rem;
+    }
 }

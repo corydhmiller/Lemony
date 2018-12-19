@@ -1,0 +1,142 @@
+$sidebarWidth: 250px;
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: $sidebarWidth;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -$sidebarWidth;
+    background: $lessblack;
+    z-index: 998;
+    color: $white;
+
+    @include transition($ease);
+
+    @include screen--l {
+        background: $lessblack;
+        left: 0;
+    }
+
+
+    & li {
+        padding-left: .5rem;
+    }
+
+    & li:before {
+        display: none;
+    }
+
+    &--visible {
+        left: 0;
+    }
+
+    &__logo {
+        justify-content: center;
+        display: none;
+        margin-top: 1rem;
+
+        @include screen--l {
+            display: flex;
+        }
+
+
+        &__image {
+            width: 7rem;
+        }
+    }
+
+    &__nav {
+        margin: 1rem .75rem 0;
+        border-top: 1px solid $grey;
+
+        & a {
+            font-weight: 400;
+            color: $white;
+        }
+
+        & a:hover {
+            background: $lightgrey;
+        }
+
+        & a:after {
+            display: none;
+        }
+    }
+
+    &__section {
+        margin: 1rem 0;
+    }
+
+    &__close {
+        margin: 1rem .75rem 0;
+
+        @include screen--l {
+            display: none;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        margin-top: auto;
+        padding: 1rem 0;
+        background: $grey;
+
+        &-section {
+            flex-grow: 1;
+            text-align: center;
+
+            &:first-child {
+                border-right: 1px solid $grey;
+            }
+        }
+    }
+
+    &__section {
+        &--toggle {
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+
+            @include transition($fast);
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 100%;
+                z-index: -1;
+                left: 0;
+                background: $yellow;
+
+                @include transition($ease);
+            }
+
+            &:hover {
+                color: $black;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+
+        &--toggled {
+            background: $yellow;
+            color: $black;
+        }
+
+        &--hidden {
+            display: none;
+            overflow: hidden;
+            position: relative;
+        }
+    }
+
+    &__current-page a {
+        background: $lightgrey;
+    }
+}

@@ -1,10 +1,31 @@
-.flex-container {
-  display: flex;
-  flex-direction: column;
-}
-.flex-middle {
-  justify-content: center;
-}
-.flex-center {
-  align-items:center;
+.flex {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    &-middle {
+        justify-content: center;
+    }
+
+    &-center {
+        align-items: center;
+    }
+
+    &-middle {
+        justify-content: center;
+    }
+
+    &-end {
+        align-self: center;
+
+        @include screen--l {
+            align-self: flex-end;
+        }
+    }
+
+    &-start {
+        align-self: flex-start;
+    }
 }
