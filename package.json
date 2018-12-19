@@ -7,12 +7,16 @@
   "author": "Cory Miller <corydhmiller@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "BABEL_ENV=production babel scripts/src/ --out-dir scripts/dist"
+    "build": "BABEL_ENV=production babel scripts/src/ --out-dir scripts/dist",
+    "dev": "BABEL_ENV=dev babel scripts/src/ --out-dir scripts/dist --watch",
+    "build-css": "node-sass --include-path scss css/style.scss -o css/ --output-style compressed",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-minify": "^0.5.0"
+    "babel-preset-minify": "^0.5.0",
+    "node-sass": "^4.9.3"
   }
 }
