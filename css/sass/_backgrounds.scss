@@ -1,0 +1,13 @@
+@import 'gradients';
+
+.bg {
+    &--cover {
+        background-size: cover;
+    }
+    &--center {
+        background-position: center center;
+    }
+    &--bottom-center {
+        background-position: bottom center;
+    }
+}

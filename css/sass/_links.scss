@@ -21,7 +21,8 @@ a {
         @include transition($ease);
     }
 
-    &:hover:after {
+    &:hover:after,
+    &:focus:after {
         width: 100%;
     }
 

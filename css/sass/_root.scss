@@ -58,6 +58,20 @@ li {
     }
 }
 
+.content-wrapper li {
+    @include screen--m {
+       padding: 0 2rem;
+       margin-left: 1rem;
+       text-indent: -1.5rem;
+    }
+    padding: 0 1rem;
+    margin-left: 0.5rem;
+    text-indent: -1.25rem;
+    &:before {
+        font-size: 1.5rem;
+    }
+}
+
 input, button {
     font-family: $sans;
 }
@@ -69,7 +83,7 @@ input, textarea {
 }
 
 :focus {
-    outline: none;
+
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
@@ -90,4 +104,5 @@ textarea:focus, input:focus {
 img {
     max-width: 100%;
     vertical-align: middle;
+    height: auto;
 }

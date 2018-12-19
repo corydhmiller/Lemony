@@ -2,7 +2,11 @@
     font-family: $serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     text-align: inherit;
 }
 
@@ -10,20 +14,34 @@ h1 {
     color: $black;
     font-weight: bold;
     margin-bottom: 1rem;
+    font-size: 2rem;
+    @include screen--m {
+        font-size: 3rem;
+    }
+    @include screen--l {
+        font-size: 4rem;
+    }
 }
 
 .big-header {
     font-weight: bold;
     font-size: $font-size-l;
-
     @include screen--l {
         font-size: 4rem;
     }
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
+    @include screen--m {
+        font-size: 1.25rem;
+    }
+    @include screen--l {
+        font-size: 1.5rem;
+    }
     font-weight: bold;
+    margin-top: 2rem;
+    border-bottom: .5rem solid #f7dd38;
 }
 
 h3 {
@@ -32,6 +50,7 @@ h3 {
 
 p {
     margin: 0 0 1rem 0;
+    line-height: 150%;
 }
 
 .text-center {
@@ -46,11 +65,9 @@ blockquote {
     font-weight: bold;
     font-style: italic;
     color: $grey;
-
     &--twitter {
         font-size: 1.45rem;
     }
-
     @include screen--l {
         margin: 2rem 4rem;
     }
@@ -65,13 +82,16 @@ blockquote {
 .massive {
     font-size: $font-size-m;
     margin: 1rem 0 0;
-
     @include screen--m {
         font-size: $font-size-l;
     }
-
-
-    @include screen--xl {
+    @include screen--l {
         font-size: 6rem;
+    }
+}
+
+.font {
+    &--bold {
+        font-weight: 600;
     }
 }

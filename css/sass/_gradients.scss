@@ -1,0 +1,20 @@
+.gradient {
+    position: relative;
+    &:before {
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        z-index: 10;
+    }
+    &--black--bottom {
+        &:before {
+            background: -moz-linear-gradient(top, rgba(37, 37, 41, 0) 4%, rgba(37, 37, 41, 1) 95%);
+            background: -webkit-linear-gradient(top, rgba(37, 37, 41, 0) 4%, rgba(37, 37, 41, 1) 95%);
+            background: linear-gradient(to bottom, rgba(37, 37, 41, 0) 4%, rgba(37, 37, 41, 1) 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00252529', endColorstr='#252529', GradientType=0);
+        }
+    }
+}

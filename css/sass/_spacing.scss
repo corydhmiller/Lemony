@@ -8,27 +8,78 @@
         &-bottom {
             margin-bottom: 2rem;
         }
+        &-all {
+            margin: 2rem;
+        }
+
     }
     &--md {
         margin-top: 2rem;
         margin-bottom: 3rem;
+        @include screen--s {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            &-top {
+                margin-top: 1rem;
+            }
+            &-bottom {
+                margin-bottom: 1rem;
+            }
+            &-all {
+                margin: 1rem;
+            }
+        }
         &-top {
             margin-top: 2rem;
         }
         &-bottom {
             margin-bottom: 3rem;
         }
+        &-all {
+            margin: 3rem;
+        }
+
     }
     &--l {
         margin-top: 3rem;
         margin-bottom: 3rem;
+        @include screen--s {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            &-top {
+                margin-top: 1.5rem;
+            }
+            &-bottom {
+                margin-bottom: 1.5rem;
+            }
+            &-all {
+                margin: 1.5rem;
+            }
+        }
         &-top {
             margin-top: 3rem;
         }
         &-bottom {
             margin-bottom: 3rem;
         }
-    }    
+        &-all {
+            margin: 3rem;
+        }
+
+    }
+    &--xl {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        &-top {
+            margin-top: 6rem;
+        }
+        &-bottom {
+            margin-bottom: 6rem;
+        }
+        &-all {
+            margin: 6rem;
+        }
+    }
 }
 
 .padding {
@@ -41,6 +92,9 @@
         &-bottom {
             padding-bottom: 2rem;
         }
+        &-all {
+            padding: 2rem;
+        }
     }
     &--md {
         padding-top: 2rem;
@@ -51,6 +105,22 @@
         &-bottom {
             padding-bottom: 3rem;
         }
+        &-all {
+            padding: 3rem;
+        }
+        @include screen--s {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            &-top {
+                padding-top: 1rem;
+            }
+            &-bottom {
+                padding-bottom: 1rem;
+            }
+            &-all {
+                padding: 1rem;
+            }
+        }
     }
     &--l {
         padding-top: 3rem;
@@ -60,6 +130,39 @@
         }
         &-bottom {
             padding-bottom: 3rem;
+        }
+        &-all {
+            padding: 3rem;
+        }
+        @include screen--s {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            &-top {
+                padding-top: 1.5rem;
+            }
+            &-bottom {
+                padding-bottom: 1.5rem;
+            }
+            &-all {
+                padding: 1.5rem;
+            }
+        }
+    }
+    &--xl {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        @include screen--l {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        &-top {
+            padding-top: 6rem;
+        }
+        &-bottom {
+            padding-bottom: 6rem;
+        }
+        &-all {
+            padding: 6rem;
         }
     }
 }
