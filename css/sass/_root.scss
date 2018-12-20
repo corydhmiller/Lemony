@@ -82,10 +82,6 @@ input, textarea {
     @include transition($ease);
 }
 
-:focus {
-
-}
-
 [placeholder]:focus::-webkit-input-placeholder {
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
@@ -105,4 +101,16 @@ img {
     max-width: 100%;
     vertical-align: middle;
     height: auto;
+}
+
+.display {
+    &--block {
+        display: block;
+    }
+    &--inline-block {
+        display: inline-block;
+    }
+    &--inline {
+        display: inline;
+    }
 }
