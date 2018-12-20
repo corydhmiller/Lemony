@@ -1,5 +1,6 @@
 // Variables
 $ease: all 0.3s ease-in-out 0s;
+$slow: all 1.5s ease-in-out 0s;
 $fast: all 0.2s;
 
 // generic transform
@@ -12,11 +13,11 @@ $fast: all 0.2s;
 @mixin rotate ($deg) {
   @include transform(rotate(#{$deg}deg));
 }
- 
+
 // scale
 @mixin scale($scale) {
   @include transform(scale($scale));
-} 
+}
 // translate
 @mixin translate ($x, $y) {
   @include transform(translate($x, $y));

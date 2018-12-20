@@ -1,0 +1,32 @@
+.animate {
+  position: relative;
+  width: 100%;
+
+  &--wrapper {
+    position: absolute;
+    width: 100%;
+    @include transition($slow);
+  }
+
+  &__content {
+    left: 100%;
+    position: relative;
+    @include transition($slow);
+  }
+
+  &__dark {
+    background: #252529;
+    color: #fcfcfd;
+  }
+
+  &__flyin {
+    left: 100%;
+    position: relative;
+    @include transition($slow);
+
+    &--complete {
+      left: 0 !important;
+    }
+  }
+
+}
