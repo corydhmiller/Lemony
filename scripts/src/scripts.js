@@ -77,7 +77,7 @@
     typeout: function (element) {
       const el = $(element);
       // We're only going to be working through this function if there is a string returned with this text.
-      if (typeof el.text() !== string) return;
+      if (typeof el.text() !== 'string') return;
       // Create an array of all the characters found in the string.
       const textArray = el.text().split('');
       let typedText = '';
