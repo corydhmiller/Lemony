@@ -30,6 +30,15 @@ $blue: #5bcaeb;
 	}
 }
 
+.color {
+	&--orange {
+		color: $orange;
+	}
+	&--white {
+		color: $white;
+	}
+}
+
 .bg {
 	&--yellow {
 		background: $yellow;

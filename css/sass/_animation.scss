@@ -1,32 +1,112 @@
 .animate {
-  position: relative;
-  width: 100%;
+  .js-enabled & {
 
-  &--wrapper {
-    position: absolute;
-    width: 100%;
-    @include transition($slow);
-  }
+    &--relative {
+      position: relative;
+      width: 100%;
+    }
 
-  &__content {
-    left: 100%;
-    position: relative;
-    @include transition($slow);
-  }
+    &--wrapper {
+      position: absolute;
+      width: 100%;
+      @include transition($slow);
+    }
 
-  &__dark {
-    background: #252529;
-    color: #fcfcfd;
-  }
+    &__content {
+      left: 100%;
+      position: relative;
+      @include transition($slow);
+    }
 
-  &__flyin {
-    left: 100%;
-    position: relative;
-    @include transition($slow);
+    &__dark {
+      background: #252529;
+      color: #fcfcfd;
+    }
 
-    &--complete {
-      left: 0 !important;
+    &__flyin {
+      left: 100%;
+      position: relative;
+      @include transition($slow);
+
+      &--complete {
+        left: 0 !important;
+      }
+    }
+
+    &__fadein {
+      opacity: 0;
+    }
+
+    &__typeout {
+      display: none;
     }
   }
+}
 
+.blink {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
