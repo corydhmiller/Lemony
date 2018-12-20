@@ -1,4 +1,12 @@
 (function () {
+  /**
+   If JavaScript is enabled, remove the class indicating that JS is not supported and add js-enabled.
+
+   Without js-enabled, the animations will not run and will appear static for devices/users who do not have JS on.
+   */
+  $('body').removeClass('no-js').addClass('js-enabled');
+
+  // DOM Variables
   const $sectionToggle = $(".sidebar__section--toggle");
   const $sectionHidden = $(".sidebar__section--hidden");
   const $sectionToggledClass = "sidebar__section--toggled";
@@ -9,13 +17,19 @@
   const $sidebarVisibleClass = "sidebar--visible";
 
   // Helper Utility functions
-
   const getRandomNumber = (min, max) => {
     return Math.random() * (max - min) + min;
   };
 
-  // Sidebar Functions
+  const resetElementHeight = element => {
+    element.css('height', '');
+  };
 
+  const setHeightToContents = el => {
+    return el.height(el[0].scrollHeight);
+  };
+
+  // Sidebar Functions
   const toggleSidebarVisible = () => {
     $sidebar.toggleClass($sidebarVisibleClass);
     $contentWrapper.toggleClass($contentWrapperSidebarVisibleClass);
@@ -31,6 +45,7 @@
       .slideToggle();
     $(this).addClass($sectionToggledClass);
   });
+
   $menuButton.on("click", function (e) {
     e.stopPropagation();
     e.preventDefault();
@@ -44,53 +59,43 @@
     }
   });
 
-  // On load, we want to get the animation objects and set their height based on the content inside of the element.
-  const setHeightToContents = el => {
-    return el.height(el[0].scrollHeight);
-  };
-
-  $('.animate').each(function () {
-    const el = $(this);
-    setHeightToContents(el);
-  });
-
   //!-- Animations
 
   const animationHandlers = {
-    flyin_right: function (element) {
+    flyin: function (element) {
+      // This function is left/right agnostic. The direction and animation is handled by the CSS.
       const el = $(element);
       el.addClass('animate__flyin--complete');
     },
-    fadein: function(element) {
+    fadein: function (element) {
       const el = $(element);
-      // Run a fade based on either data-fadetime or standard 1000
+      // Run an opacity fade based on either data-fadetime or standard 500
       el.animate({
         opacity: 1
       }, el.data("fadetime") || 500);
     },
-    typeout: function(element) {
+    typeout: function (element) {
       const el = $(element);
-      const originalText = el.text();
-      const textArray = originalText.split('');
+      // We're only going to be working through this function if there is a string returned with this text.
+      if (typeof el.text() !== string) return;
+      // Create an array of all the characters found in the string.
+      const textArray = el.text().split('');
       let typedText = '';
       // Set the text to nothing, then reveal the empty element.
       el.text('').show();
-      // Starting at the 0 index, loop through the array that was created from the string
+      // Starting at the 0 index, recursively loop through the array that was created from the string
       (function typeLoop(i = 0) {
         setTimeout(function () {
           typedText = typedText + textArray[i];
           el.html(typedText + '\<span class="blink"\>|\</span\>');
           if (i < textArray.length - 1) {
-           return typeLoop(i + 1); // Call the loop again
+            // If the current index is less than the length, call the loop again
+            return typeLoop(i + 1);
           }
-        }, getRandomNumber(10,200));
+        }, getRandomNumber(10, 200));
         // The get random number above simulates a typing speed range.
       })();
     }
-  };
-
-  const resetParentStyles = element => {
-    element.css('height', '');
   };
 
   const runVisibleAnimations = () => {
@@ -123,7 +128,7 @@
             }
           }
           // Reset height style on parent animation wrapper
-          resetParentStyles(parentAnimateWrapper);
+          resetElementHeight(parentAnimateWrapper);
         }
       }
     });
@@ -134,6 +139,7 @@
     runVisibleAnimations();
   });
 
+  // Define function to determine if the given element is in the viewport.
   $.fn.isInViewport = function () {
     const elementTop = $(this).offset().top;
     const elementBottom = elementTop + $(this).outerHeight();
@@ -150,7 +156,11 @@
     for (i in s) l.addEventListener(i, s);
   })(document);
 
-  $('body').removeClass('no-js').addClass('js-enabled');
-  // If the user refreshes or loads in and an animation is visible, we want to
+  // On load, we want to get the animation objects and set their height based on the content inside of the element. This will be removed once the animation runs.
+  $('.animate').each(function () {
+    const el = $(this);
+    setHeightToContents(el);
+  });
+  // If the user refreshes or loads in and an animation is visible, we want to immediately run the animation.
   runVisibleAnimations();
 })();
