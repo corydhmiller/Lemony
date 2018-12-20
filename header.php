@@ -33,7 +33,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body class="no-js">
 	<header class="header header--visibility">
 		<div class="header__menu">
 			<div class="menu__button">
