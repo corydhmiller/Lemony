@@ -133,6 +133,17 @@
       }
     });
   };
+  /**
+  Here's an example of the HTML required for a fade-in animation:
+
+    <div class="animate">
+      <div class="animate__object animate__fadein" data-animation="fadein">
+        <h2 class="serif">This header will fade in with this image</h2>
+        <img src="/images/my-great-image.jpg">
+      </div>
+    </div>
+
+   */
 
   // As we scroll or resize the window, we need to check to see if there are any visible animations to run.
   $(window).on('resize scroll', function () {
